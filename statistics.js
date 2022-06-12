@@ -1,4 +1,4 @@
-API = 'http://localhost:7071/api/getStatistics'
+API = 'https://oqadgen2.azurewebsites.net/api/getStatistics'
 const titles = JSON.parse(sessionStorage.getItem('filteredTitles'))
 const images = JSON.parse(sessionStorage.getItem('filteredImages'))
 const loader = document.getElementById('loader')

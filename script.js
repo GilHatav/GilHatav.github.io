@@ -1,5 +1,5 @@
 
-API = 'http://localhost:7071/api/creativesFromUrl'
+API = 'https://oqadgen2.azurewebsites.net/api/creativesFromUrl'
 const form = document.getElementById('form')
 const loader = document.getElementById('loader')
 const example = {"env": "local", "url": "https://www.burgerdudes.se/the-worlds-50-best-burgers/", "stock":""}
