@@ -39,10 +39,12 @@ body {
 }
 
 .topheading {
-    background-color:var(--secondary-color);
-    overflow: hidden;
-    text-align: center;
-  }
+  background-color:var(--secondary-color);
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
 
   .loader-wrapper {
     height: 30px;
@@ -280,6 +282,7 @@ body {
   position: absolute;
   bottom: 8px;
   left: 16px;
+  background-color: rgb(121, 121, 121);
 }
 
 .content-table {

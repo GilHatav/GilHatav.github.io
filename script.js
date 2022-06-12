@@ -1,6 +1,7 @@
 
 API = 'https://oqadgen2.azurewebsites.net/api/creativesFromUrl'
 const form = document.getElementById('form')
+const explore = document.getElementById('explore')
 const loader = document.getElementById('loader')
 const example = {"env": "local", "url": "https://www.burgerdudes.se/the-worlds-50-best-burgers/", "stock":""}
 loader.style.display = "none"
@@ -11,6 +12,18 @@ window.addEventListener("beforeunload", function () {
 
 if(form != null){
   form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const searchTerm = search.value
+    if(searchTerm && searchTerm !== '') {
+        const payload = {"env": "local", "url": searchTerm, "stock":""};
+        getCreatives(API, payload)
+        search.value = ''
+    } else {
+        window.location.reload()
+    }
+  })
+
+  explore.addEventListener('click', (e) => {
     e.preventDefault()
     const searchTerm = search.value
     if(searchTerm && searchTerm !== '') {
